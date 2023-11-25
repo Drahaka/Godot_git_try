@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dswpqbr5n2rb7"]
+
+[ext_resource type="PackedScene" uid="uid://dps7nwijua80q" path="res://Scenes/bunny_char.tscn" id="1_8xacw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_37js8"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Floors"]]
+transform = Transform3D(-8.51389e-06, 0, 1, 0, 3, 0, -194.775, 0, -4.37114e-08, 0, -9, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_37js8")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D"]
+
+[node name="Bunny_char" parent="." instance=ExtResource("1_8xacw")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 13.6992, 0)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["Floors"]]
+transform = Transform3D(-8.51389e-06, 0, 1, 0, 3, 0, -194.775, 0, -4.37114e-08, 0, 31.9006, -144.724)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_37js8")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D2"]
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." groups=["Floors"]]
+transform = Transform3D(-8.51389e-06, 0, 1, 0, 3, 0, -194.775, 0, -4.37114e-08, 0, 31.9006, 134.415)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+shape = SubResource("BoxShape3D_37js8")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D3"]
